@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Show Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            visibility: hidden;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h2>developertaposh@gmail.com</h2>
+    <div class="email-container">
+        <h2 id="email">developertaposh@gmail.com</h2>
+        <button id="show-email-btn">Show Email</button>
+    </div>
+    <script>
+        document.getElementById('show-email-btn').addEventListener('click', function () {
+            const email = document.getElementById('email');
+            email.style.visibility = 'visible';
+        });
+    </script>
 </body>
 </html>
